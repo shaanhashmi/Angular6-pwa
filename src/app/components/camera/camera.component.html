@@ -1,0 +1,18 @@
+<div class="text-center">
+  <video #video id="video" width="320" height="240" autoplay style="background: #ccc;">
+  </video>
+</div>
+<canvas #canvas [ngStyle]="{'display': isVisible ? 'block' : 'none' }" id="canvas" width="320" height="240"></canvas>
+<br>
+<!-- <ul style="list-style: none;">
+  <li class="d-inline-block p-1" *ngFor="let c of captures">
+    <img src="{{ c }}" height="50" />
+  </li>
+</ul> -->
+<!-- </div> -->
+<button type="submit" class="btn btn-primary w-100" (click)="openCamera()" *ngIf="!isOpen">
+  CAMERA
+</button>
+<button type="submit" class="btn btn-primary w-100" (click)="capture()" *ngIf="isOpen">
+  CAPTURE
+</button>
