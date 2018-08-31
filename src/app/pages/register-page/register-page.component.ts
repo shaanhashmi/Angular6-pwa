@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-page.component.css']
 })
 export class RegisterPageComponent implements OnInit {
-
+  logo: string = 'assets/pwa-logo.png';
   constructor() { }
 
   ngOnInit() {

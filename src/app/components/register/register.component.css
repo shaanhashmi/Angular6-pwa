@@ -1,9 +1,4 @@
 :host /deep/ .btn.btn-primary{
     background: #156090 !important;
-    border-color: #156090
-}
-
-:host /deep/ .btn.btn-primary:hover{
-    background: #093856 !important;
-    
+    border-color: #156090;
 }

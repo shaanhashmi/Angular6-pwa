@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center align-items-center login-container">
-	<div class="jumbotron bg-white border p-5 shadow">
-		<app-login (onLogin)="onSubmit($event)"></app-login>
-	</div>
+  <div class="jumbotron bg-white border px-5 py-4 shadow">
+    <app-login [logo]="logo" (onLogin)="onSubmit($event)"></app-login>
+  </div>
 </div>

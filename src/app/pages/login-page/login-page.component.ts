@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
   loader: boolean;
-  constructor(private authService: AuthService, private router: Router) { }
+  logo: string;
+  constructor(private authService: AuthService, private router: Router) {
+    this.logo = 'assets/pwa-logo.png';
+  }
 
   ngOnInit() {
   }

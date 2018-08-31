@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forgot-password-page.component.css']
 })
 export class ForgotPasswordPageComponent implements OnInit {
-
+  logo: string = 'assets/pwa-logo.png';
   constructor() { }
 
   ngOnInit() {
