@@ -7,7 +7,7 @@ import { Ng2TelInputModule } from 'ng2-tel-input';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { PhoneNumberComponent } from './phone-number/phone-number.component'
+import { PhoneNumberComponent } from './phone-number/phone-number.component';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CameraComponent } from './camera/camera.component';
 

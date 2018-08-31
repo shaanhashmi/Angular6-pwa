@@ -1,19 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../providers/auth/auth.service';
 
+import { defaultErrorMsg } from "../../models/app-consts";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-
-  constructor() { }
+  loader: boolean;
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  onSubmit(ev: any) {
-    console.log('Emitted Event ', ev);
-  }
+  onSubmit(formData) {
+    console.log('Emitted Event ', formData);
+    this.loader = true;
 
+    this.authService.login(formData).subscribe((result) => {
+      this.loader = false;
+      console.log(result)
+      // this.router.navigate(['/']);
+    }, err => {
+      console.log({ message: err.message || defaultErrorMsg })
+      this.loader = false;
+    });
+  }
 }
