@@ -24,10 +24,10 @@ body{
     box-shadow:         3px 3px 5px 6px #ccc;
 }
 
-.login-box{
+/* .login-box{
   min-width: 320px;
   min-height: 517px;
-}
+} */
 
 .btn.focus, .btn:focus{
   box-shadow: none;
@@ -104,14 +104,19 @@ button:focus:not(:active)::after {
 }
 
 
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 320px) {
+  .prev, .next,.text {font-size: 11px}
+    div{border:none;}
+    .px-5{
+        padding: 15px !important;
+    }
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 768px) {
   .prev, .next,.text {font-size: 11px}
     div{border:none;}
-    .p-5{
-        padding: 15px !important;
-    }
     .shadow{
         -moz-box-shadow:    none!important;
         -webkit-box-shadow: none!important;
@@ -120,34 +125,4 @@ button:focus:not(:active)::after {
     .border{
         border: none !important;
     }
-    .login-box{
-        min-width: 320px;
-        min-height: initial;
-    }
 }
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 320px) {
-  .prev, .next,.text {font-size: 11px}
-    div{border:none;}
-    .p-5{
-        padding: 15px !important;
-    }
-    .shadow{
-        -moz-box-shadow:    none!important;
-        -webkit-box-shadow: none!important;
-        box-shadow:         none!important;
-    }
-    .border{
-        border: none !important;
-    }
-    .login-box{
-        min-width: 280px;
-        min-height: initial;
-    }
-}
-
-
-
-
-
