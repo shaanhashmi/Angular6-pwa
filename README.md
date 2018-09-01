@@ -1,4 +1,4 @@
-# Angular6-pwa
+# Angular-pwa
 Angular6-pwa with bootstrap 4 responsive
 
 # A6B4
