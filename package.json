@@ -1,10 +1,10 @@
 {
-  "name": "A6-B4",
+  "name": "stackdevs",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "start:build": "ng build --prod && http-server --baseDir dist/A6-B4",
+    "start:build": "ng build --prod && http-server --baseDir dist/stackdevs",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "A6-B4": {
+    "stackdevs": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/A6-B4",
+            "outputPath": "dist/stackdevs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "A6-B4:build"
+            "browserTarget": "stackdevs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "A6-B4:build:production"
+              "browserTarget": "stackdevs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "A6-B4:build"
+            "browserTarget": "stackdevs:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "A6-B4-e2e": {
+    "stackdevs-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -111,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "A6-B4:serve"
+            "devServerTarget": "stackdevs:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "A6-B4:serve:production"
+              "devServerTarget": "stackdevs:serve:production"
             }
           }
         },
@@ -131,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "A6-B4"
+  "defaultProject": "stackdevs"
 }
