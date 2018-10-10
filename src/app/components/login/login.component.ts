@@ -2,32 +2,42 @@ import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef, Input }
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  @Input() logo: string;
-  @ViewChild('email') email: ElementRef;
-  @ViewChild('password') password: ElementRef;
-  title: string = 'login';
-  loginData = {
-    email: '',
-    password: ''
-  };
-  @Output() onLogin = new EventEmitter<any>();
+    @Input() logo: string;
+    @ViewChild('email') email: ElementRef;
+    @ViewChild('password') password: ElementRef;
+    @Output() signWithFb: EventEmitter<any> = new EventEmitter<any>();
+    @Output() signWithGoogle: EventEmitter<any> = new EventEmitter<any>();
+    title = 'login';
+    loginData = {
+        email: '',
+        password: ''
+    };
+    // tslint:disable-next-line:no-output-on-prefix
+    @Output() onLogin = new EventEmitter<any>();
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
-
-  onSubmit() {
-    const formData = {
-      email: this.email.nativeElement.value,
-      password: this.password.nativeElement.value
+    ngOnInit() {
     }
-    this.onLogin.emit(formData);
-  }
 
+    onSubmit() {
+        const formData = {
+            email: this.email.nativeElement.value,
+            password: this.password.nativeElement.value
+        };
+        this.onLogin.emit(formData);
+    }
+
+    facebookLogin() {
+        this.signWithFb.emit('Facebook');
+    }
+
+    googleLogin() {
+        this.signWithGoogle.emit('Google');
+    }
 }

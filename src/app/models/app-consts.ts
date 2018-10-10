@@ -1,1 +1,1 @@
-export const defaultErrorMsg: string = "Something Went Wrong";
+export const defaultErrorMsg = 'Something Went Wrong';
