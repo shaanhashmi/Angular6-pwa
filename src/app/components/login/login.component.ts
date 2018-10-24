@@ -7,6 +7,10 @@ import { FormGroup } from '@angular/forms';
     styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+    isGoogle: boolean = true;
+    isFacebook: boolean = true;
+
     @Input() logo: string;
     @ViewChild('email') email: ElementRef;
     @ViewChild('password') password: ElementRef;
@@ -17,7 +21,7 @@ export class LoginComponent implements OnInit {
         email: '',
         password: ''
     };
-    // tslint:disable-next-line:no-output-on-prefix
+
     @Output() onLogin = new EventEmitter<any>();
 
     constructor() { }
@@ -33,11 +37,11 @@ export class LoginComponent implements OnInit {
         this.onLogin.emit(formData);
     }
 
-    facebookLogin() {
-        this.signWithFb.emit('Facebook');
+    fbSignIn(e) {
+        console.log(e);
     }
 
-    googleLogin() {
-        this.signWithGoogle.emit('Google');
+    googleSignIn(e) {
+        console.log(e);
     }
 }

@@ -10,6 +10,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { PhoneNumberComponent } from './phone-number/phone-number.component';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CameraComponent } from './camera/camera.component';
+import { FacebookLoginModule } from '../authentication/social-login-modules/facebook-login/facebook-login.module';
+import { GoogleLoginModule } from '../authentication/social-login-modules/google-login/google-login.module';
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { CameraComponent } from './camera/camera.component';
     FormsModule,
     RouterModule,
     Ng2TelInputModule,
-    InputMaskModule
+    InputMaskModule,
+    FacebookLoginModule,
+    GoogleLoginModule
   ],
   declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent, PhoneNumberComponent, CameraComponent],
   exports: [LoginComponent, RegisterComponent, ForgotPasswordComponent, PhoneNumberComponent, CameraComponent]

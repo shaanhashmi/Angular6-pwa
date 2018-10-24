@@ -12,17 +12,16 @@
             <label for="pwd">Password</label>
             <input type="password" #password class="form-control" id="pwd" placeholder="Enter password">
         </div>
-        <a href="javascript:" routerLink="/forgot-password">Forgot your password?</a>
+        <div class="text-right">
+            <a href="javascript:" class="forgot" routerLink="/forgot-password">Forgot your password?</a>
+        </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary w-90 mt-3">LOGIN</button>
+            <button type="submit" class="btn btn-primary w-100 mt-3">LOGIN</button>
         </div>
         <div class="d-flex justify-content-center">
-            <div class="shadow p-3" (click)="googleLogin()">
-                <img src="assets/google.png" alt="Google" width="50">
-            </div>
-            <div class="p-3" (click)="facebookLogin()">
-                <img class="shadow" src="assets/facebook.png" alt="Facebook" width="50">
-            </div>
+            <!-- Social login here! -->
+            <google-login [isGoogle]="isGoogle" (googleSignIn)="googleSignIn($event)"></google-login>
+            <facebook-login [isFacebook]="isFacebook" (fbSignIn)="fbSignIn($event)"></facebook-login>
         </div>
         <div class="text-center">
             <a href="javascript:" routerLink="/register">Register Here!</a>
