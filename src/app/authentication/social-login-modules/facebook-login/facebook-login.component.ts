@@ -1,9 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { environment } from '../../../../environments/environment';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthLogoutService } from '../auth-logout.service';
 import { SocialUser } from '../../models/user';
-import { Router } from '@angular/router';
+
+import { config } from '../social.config';
 
 declare const FB: any;
 
@@ -36,7 +37,7 @@ export class FacebookLoginComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    FB.init(environment.facebookConfig);
+    FB.init(config.facebookConfig);
     FB.getLoginStatus((response) => {
       this.statusChangeCallback(response);
     });

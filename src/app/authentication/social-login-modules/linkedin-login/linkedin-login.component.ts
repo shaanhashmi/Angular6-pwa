@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input, NgZone } from '@angular/core';
-import { environment } from '../../../../environments/environment';
+import { config } from '../social.config';
 
 declare let IN: any;
 export class LinkedInResponse {
@@ -37,7 +37,7 @@ export class LinkedinLoginComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.initialize(environment.linkedinConfig);
+    this.initialize(config.linkedinConfig);
   }
 
   initialize(config) {

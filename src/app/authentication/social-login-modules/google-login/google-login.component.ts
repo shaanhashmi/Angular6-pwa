@@ -1,9 +1,10 @@
 import { Component, OnInit, EventEmitter, Input, Output, NgZone } from '@angular/core';
-import { environment } from '../../../../environments/environment';
 import { SocialUser } from '../../models';
 import { AuthLogoutService } from '../auth-logout.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+
+import { config } from '../social.config';
 
 declare const gapi: any;
 
@@ -37,7 +38,7 @@ export class GoogleLoginComponent implements OnInit {
   ngAfterViewInit() {
 
     gapi.load('auth2', () => {
-      this.auth2 = gapi.auth2.init(environment.googleConfig).then((success) => {
+      this.auth2 = gapi.auth2.init(config.googleConfig).then((success) => {
         if (success.isSignedIn.get()) {
           // let profile = success.currentUser.get().getBasicProfile();
           // let authResponseObj = success.currentUser.get().getAuthResponse(true);
