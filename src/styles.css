@@ -128,3 +128,10 @@ button:focus:not(:active)::after {
         border: none !important;
     }
 }
+
+@media (min-width: 992px){
+  .col-lg-4 {
+      flex: 0 0 28.333333%;
+      max-width: 28.333333%;
+  }
+}
